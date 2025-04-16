@@ -9,7 +9,7 @@ const Sponsors = () => {
       <header className="bg-deep-teal py-24 px-4 md:px-6">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-playfair text-cream-beige mb-4">
-            Sponsors & Partners
+            Become A Sponsor Now
           </h1>
         </div>
       </header>
@@ -41,10 +41,6 @@ const Sponsors = () => {
             <PartnerLogo src="/lovable-uploads/84125fb4-422b-4813-b3c3-8cac4ecf7060.png" alt="CBC" />
             <PartnerLogo src="/lovable-uploads/cf8b30e9-94eb-4066-88e9-66c23f45e530.png" alt="York Region" />
             <PartnerLogo src="/lovable-uploads/71a08741-61a5-42cf-be5d-33f794b9b9a6.png" alt="Markham Economist & Sun" />
-            <PartnerLogo src="/lovable-uploads/cc5181b6-3d3d-49cd-93c2-6d5112c2a4a5.png" alt="RISE Collective" />
-            <PartnerLogo src="/lovable-uploads/b1833e75-ed34-421d-9c4d-35a60b561ffa.png" alt="Markham Public Library" />
-            <PartnerLogo src="/lovable-uploads/0b183273-5ee0-4390-ac43-d5e302c423d8.png" alt="Winged Canvas" />
-            <PartnerLogo src="/lovable-uploads/9f73b137-b45d-40cb-b09f-cc1f9a409113.png" alt="SugaCayne" />
           </div>
         </div>
       </section>
@@ -54,7 +50,7 @@ const Sponsors = () => {
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold font-playfair text-deep-teal text-center mb-10 flex items-center justify-center gap-3">
             <Award size={28} className="text-warm-terracotta" />
-            <span>Partner With Purpose</span>
+            <span>Become A Sponsor Now</span>
           </h2>
           
           <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">

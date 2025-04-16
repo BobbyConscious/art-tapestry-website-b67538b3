@@ -1,12 +1,6 @@
 
 import { useState } from "react";
 
-type Artist = {
-  name: string;
-  title: string;
-  image: string;
-};
-
 const artists: Artist[] = [
   {
     name: "Ava Jasmine Dedier",
@@ -35,6 +29,12 @@ const artists: Artist[] = [
   }
 ];
 
+type Artist = {
+  name: string;
+  title: string;
+  image: string;
+};
+
 const FeaturedArtists = () => {
   const [activeArtist, setActiveArtist] = useState<Artist | null>(null);
 
@@ -59,7 +59,7 @@ const FeaturedArtists = () => {
                 <img 
                   src={artist.image} 
                   alt={artist.name} 
-                  className="w-full h-full object-cover object-center object-top"
+                  className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-deep-teal bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-cream-beige font-bold">View Details</span>
@@ -77,13 +77,10 @@ const FeaturedArtists = () => {
             <img src="/lovable-uploads/971fe0c4-b658-46c2-8aeb-4ebd9dd6cd17.png" alt="CTV" className="h-12 object-contain" />
             <img src="/lovable-uploads/0cf15100-5069-4a45-8f5c-485b4b3c5c23.png" alt="Bell Media" className="h-10 object-contain" />
             <img src="/lovable-uploads/00585485-580b-4479-8219-12af520cb790.png" alt="NOW" className="h-12 object-contain" />
+            <img src="/lovable-uploads/167bfc67-75a4-48f7-8aa6-67646f45e330.png" alt="Toronto Caribbean" className="h-12 object-contain" />
             <img src="/lovable-uploads/84125fb4-422b-4813-b3c3-8cac4ecf7060.png" alt="CBC" className="h-12 object-contain" />
             <img src="/lovable-uploads/cf8b30e9-94eb-4066-88e9-66c23f45e530.png" alt="York Region" className="h-10 object-contain" />
             <img src="/lovable-uploads/71a08741-61a5-42cf-be5d-33f794b9b9a6.png" alt="Markham Economist & Sun" className="h-10 object-contain" />
-            <img src="/lovable-uploads/cc5181b6-3d3d-49cd-93c2-6d5112c2a4a5.png" alt="RISE Collective" className="h-10 object-contain" />
-            <img src="/lovable-uploads/b1833e75-ed34-421d-9c4d-35a60b561ffa.png" alt="Markham Public Library" className="h-12 object-contain" />
-            <img src="/lovable-uploads/0b183273-5ee0-4390-ac43-d5e302c423d8.png" alt="Winged Canvas" className="h-12 object-contain" />
-            <img src="/lovable-uploads/9f73b137-b45d-40cb-b09f-cc1f9a409113.png" alt="SugaCayne" className="h-10 object-contain" />
           </div>
         </div>
       </div>
@@ -114,7 +111,7 @@ const FeaturedArtists = () => {
                   <img 
                     src={activeArtist.image} 
                     alt={activeArtist.name} 
-                    className="w-full h-full object-cover object-center object-top"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
               </div>
