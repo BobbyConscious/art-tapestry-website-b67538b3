@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import Button from "@/components/Button";
+import ImageGallery from "@/components/ImageGallery";
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0 bg-deep-teal">
           <div className="absolute inset-0" style={{ 
-            backgroundImage: "url('/lovable-uploads/dcc5b3c2-3d6a-4452-9986-9179a51d8f8a.png')", 
+            backgroundImage: "url('/lovable-uploads/ea7e7bed-9fa5-4354-91a3-8a9aac0fab3d.png')", 
             backgroundSize: "cover", 
             backgroundPosition: "center",
             mixBlendMode: "soft-light", 
@@ -47,10 +48,17 @@ const Home = () => {
             <Button variant="soft-teal" size="lg" to="/events">
               Explore the Event
             </Button>
-            <Button variant="denim" size="lg" to="/sponsors">
-              Become a Sponsor
+            <Button variant="denim" size="lg" to="/about">
+              Learn More
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Image Gallery Section */}
+      <section className="py-12 bg-cream-beige">
+        <div className="container mx-auto px-4 md:px-6">
+          <ImageGallery />
         </div>
       </section>
 
@@ -63,7 +71,7 @@ const Home = () => {
             </h2>
             
             <p className="text-lg font-poppins text-deep-teal mb-6">
-              <em>Bridging Generations</em> isn't just an art show – it's a movement. A platform for emerging and established BIPOC women artists to tell stories, pass down wisdom, and reshape the future of art accessibility.
+              <em>Bridging Generations</em> isn't just an art show – it's a movement. A platform for emerging and established BIPOC artists to tell stories, pass down wisdom, and reshape the future of art accessibility.
             </p>
             
             <p className="text-lg font-poppins text-deep-teal mb-8">

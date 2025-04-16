@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="font-playfair text-xl font-bold mb-4">Bridging Generations</h3>
             <p className="font-poppins text-sm">
-              A Cultural Tapestry of Art celebrating intergenerational stories through BIPOC women's artistry.
+              A Cultural Tapestry of Art celebrating intergenerational stories through BIPOC artistry.
             </p>
           </div>
           
@@ -19,7 +19,7 @@ const Footer = () => {
               <li><Link to="/" className="hover:text-burnt-mustard transition-colors">Home</Link></li>
               <li><Link to="/events" className="hover:text-burnt-mustard transition-colors">Events</Link></li>
               <li><Link to="/gallery" className="hover:text-burnt-mustard transition-colors">Gallery</Link></li>
-              <li><Link to="/sponsors" className="hover:text-burnt-mustard transition-colors">Sponsors</Link></li>
+              <li><Link to="/about" className="hover:text-burnt-mustard transition-colors">About</Link></li>
             </ul>
           </div>
           

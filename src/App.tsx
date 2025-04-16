@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,7 +8,7 @@ import { useEffect } from "react";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
-import Sponsors from "./pages/Sponsors";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -34,7 +35,7 @@ const App = () => (
             <Route path="/" element={<><ScrollToTop /><Home /></>} />
             <Route path="/events" element={<><ScrollToTop /><Events /></>} />
             <Route path="/gallery" element={<><ScrollToTop /><Gallery /></>} />
-            <Route path="/sponsors" element={<><ScrollToTop /><Sponsors /></>} />
+            <Route path="/about" element={<><ScrollToTop /><About /></>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
