@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
+import Sponsors from "./pages/Sponsors";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/events" element={<><ScrollToTop /><Events /></>} />
             <Route path="/gallery" element={<><ScrollToTop /><Gallery /></>} />
             <Route path="/about" element={<><ScrollToTop /><About /></>} />
+            <Route path="/sponsors" element={<><ScrollToTop /><Sponsors /></>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

@@ -1,6 +1,49 @@
 
 import { Calendar, MapPin, Book, Palette, Mic, ShoppingBag } from "lucide-react";
 import Button from "@/components/Button";
+import FeaturedArtists from "@/components/FeaturedArtists";
+import OurStory from "@/components/OurStory";
+
+// Event data structure to support multiple events
+type EventTour = {
+  id: number;
+  title: string;
+  dates: {
+    range: string;
+    venue: string;
+    location?: string;
+  }[];
+};
+
+// Sample data for events
+const eventTours: EventTour[] = [
+  {
+    id: 1,
+    title: "The Tour: Art in Motion",
+    dates: [
+      {
+        range: "August 7th to August 10th, 2025",
+        venue: "Milliken Mills Library",
+        location: "Markham, ON"
+      },
+      {
+        range: "August 14th to August 17th, 2025",
+        venue: "Angus Glen Library",
+        location: "Markham, ON"
+      },
+      {
+        range: "August 21st to August 24th, 2025",
+        venue: "Markham Village Library",
+        location: "Markham, ON"
+      },
+      {
+        range: "August 28th to August 31st, 2025",
+        venue: "Thornhill Village Library",
+        location: "Thornhill, ON"
+      }
+    ]
+  }
+];
 
 const Events = () => {
   return (
@@ -9,60 +52,35 @@ const Events = () => {
       <header className="bg-deep-teal py-24 px-4 md:px-6">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-playfair text-cream-beige mb-4">
-            The Tour: Art in Motion
+            Events Calendar
           </h1>
         </div>
       </header>
       
-      {/* Introduction */}
-      <section className="py-16 bg-cream-beige">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg font-poppins text-deep-teal mb-6">
-              What began as a personal vision from 17-year-old visual artist and creative director <strong>Ava Jasmine Dedier</strong> is now creating unforgettable community experiences.
-            </p>
-            
-            <p className="text-lg font-poppins text-deep-teal mb-6">
-              Ava noticed a gap — in galleries, in stories told, and in how young and culturally diverse voices are valued in the art world. That gap also reflected her own lived experience. So, she created a solution:
-            </p>
-            
-            <p className="text-lg font-poppins text-deep-teal mb-6">
-              <strong>Bridging Generations</strong> is her answer to a world in need of connection. It's a celebration of legacy, creativity, and cultural identity.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Our Story Section */}
+      <OurStory />
       
-      {/* Event Dates */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl md:text-4xl font-bold font-playfair text-deep-teal text-center mb-12">
-            Event Dates and Venues
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <EventCard 
-              date="August 7th to August 10th, 2025" 
-              venue="Milliken Mills Library" 
-            />
+      {/* Event Tours Section */}
+      {eventTours.map((tour) => (
+        <section key={tour.id} className="py-16 bg-cream-beige">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl md:text-4xl font-bold font-playfair text-deep-teal text-center mb-12">
+              {tour.title}
+            </h2>
             
-            <EventCard 
-              date="August 14th to August 17th, 2025" 
-              venue="Angus Glen Library" 
-            />
-            
-            <EventCard 
-              date="August 21st to August 24th, 2025" 
-              venue="Markham Village Library" 
-            />
-            
-            <EventCard 
-              date="August 28th to August 31st, 2025" 
-              venue="Thornhill Village Library" 
-            />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {tour.dates.map((date, index) => (
+                <EventCard 
+                  key={index}
+                  date={date.range}
+                  venue={date.venue}
+                  location={date.location}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
       
       {/* Workshop Themes */}
       <section className="py-16 bg-soft-teal text-cream-beige">
@@ -109,11 +127,14 @@ const Events = () => {
           </div>
         </div>
       </section>
+      
+      {/* Featured Artists Section */}
+      <FeaturedArtists />
     </div>
   );
 };
 
-const EventCard = ({ date, venue }: { date: string; venue: string }) => {
+const EventCard = ({ date, venue, location }: { date: string; venue: string; location?: string }) => {
   return (
     <div className="bg-cream-beige border-l-4 border-warm-terracotta p-6 rounded-r shadow-md">
       <div className="flex items-start">
@@ -133,6 +154,11 @@ const EventCard = ({ date, venue }: { date: string; venue: string }) => {
           <p className="font-medium font-poppins text-deep-teal">
             <strong>Venue:</strong> {venue}
           </p>
+          {location && (
+            <p className="font-medium font-poppins text-deep-teal mt-1">
+              <strong>Location:</strong> {location}
+            </p>
+          )}
         </div>
       </div>
     </div>
