@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				playfair: ['Playfair Display', 'serif'],
+				poppins: ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +56,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom color palette
+				'deep-teal': '#264C48',
+				'warm-terracotta': '#A8502C',
+				'burnt-mustard': '#D0892B',
+				'forest-green': '#2F5240',
+				'eggplant-plum': '#512A3C',
+				'cream-beige': '#F2E7D5',
+				'soft-teal': '#396F6B',
+				'denim-blue': '#24546B',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

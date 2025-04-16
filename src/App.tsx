@@ -3,10 +3,24 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import { useEffect } from "react";
+import Home from "./pages/Home";
+import Events from "./pages/Events";
+import Gallery from "./pages/Gallery";
+import Sponsors from "./pages/Sponsors";
 import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
+
+const ScrollToTop = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
+  return null;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -14,11 +28,17 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<><ScrollToTop /><Home /></>} />
+            <Route path="/events" element={<><ScrollToTop /><Events /></>} />
+            <Route path="/gallery" element={<><ScrollToTop /><Gallery /></>} />
+            <Route path="/sponsors" element={<><ScrollToTop /><Sponsors /></>} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
