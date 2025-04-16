@@ -71,7 +71,7 @@ const Navbar = () => {
             <NavLink to="/events">Events</NavLink>
             <NavLink to="/gallery">Gallery</NavLink>
             <NavLink to="/sponsors">Sponsors</NavLink>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
           </nav>
         </div>
 
@@ -90,8 +90,8 @@ const Navbar = () => {
             <MobileNavLink to="/sponsors" onClick={() => setIsMenuOpen(false)}>
               Sponsors
             </MobileNavLink>
-            <MobileNavLink to="/about" onClick={() => setIsMenuOpen(false)}>
-              About
+            <MobileNavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
+              Contact
             </MobileNavLink>
           </nav>
         )}

@@ -12,6 +12,10 @@ const OurStory = () => {
 
           <div className="prose prose-lg max-w-none text-deep-teal font-poppins">
             <p>
+              "Bridging Generations – A Cultural Tapestry in Art" is an innovative, community-driven art initiative designed as a collective movement of talented and purposeful BIPOC visual artists.
+            </p>
+            
+            <p>
               What began as a personal vision from 17-year-old visual artist and creative director <strong>Ava Jasmine Dedier</strong> is now creating unforgettable community experiences.
             </p>
             
@@ -21,6 +25,10 @@ const OurStory = () => {
             
             <p>
               <strong>Bridging Generations</strong> is her answer to a world in need of connection. It's a celebration of legacy, creativity, and cultural identity.
+            </p>
+
+            <p>
+              To strengthen the impact of the event Ava has thoughtfully selected powerhouse artists to will aid in collaboratively building this pioneering event, with a mission to establish an ongoing platform that amplifies artistic talent, fosters deeper cultural understanding, and actively unites multiple generations.
             </p>
           </div>
 

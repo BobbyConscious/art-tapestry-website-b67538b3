@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
-import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Sponsors from "./pages/Sponsors";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
@@ -36,7 +36,7 @@ const App = () => (
             <Route path="/" element={<><ScrollToTop /><Home /></>} />
             <Route path="/events" element={<><ScrollToTop /><Events /></>} />
             <Route path="/gallery" element={<><ScrollToTop /><Gallery /></>} />
-            <Route path="/about" element={<><ScrollToTop /><About /></>} />
+            <Route path="/contact" element={<><ScrollToTop /><Contact /></>} />
             <Route path="/sponsors" element={<><ScrollToTop /><Sponsors /></>} />
             <Route path="*" element={<NotFound />} />
           </Routes>

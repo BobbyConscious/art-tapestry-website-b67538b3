@@ -1,5 +1,5 @@
 
-import { Award, Handshake, Landmark } from "lucide-react";
+import { Award, Handshake } from "lucide-react";
 import Button from "@/components/Button";
 
 const Sponsors = () => {
@@ -41,97 +41,67 @@ const Sponsors = () => {
             <PartnerLogo src="/lovable-uploads/84125fb4-422b-4813-b3c3-8cac4ecf7060.png" alt="CBC" />
             <PartnerLogo src="/lovable-uploads/cf8b30e9-94eb-4066-88e9-66c23f45e530.png" alt="York Region" />
             <PartnerLogo src="/lovable-uploads/71a08741-61a5-42cf-be5d-33f794b9b9a6.png" alt="Markham Economist & Sun" />
-            <PartnerLogo src="/lovable-uploads/c0fef7a8-1288-49d6-aed8-58e88b67f956.png" alt="Newmarket Today" />
+            <PartnerLogo src="/lovable-uploads/cc5181b6-3d3d-49cd-93c2-6d5112c2a4a5.png" alt="RISE Collective" />
+            <PartnerLogo src="/lovable-uploads/b1833e75-ed34-421d-9c4d-35a60b561ffa.png" alt="Markham Public Library" />
+            <PartnerLogo src="/lovable-uploads/0b183273-5ee0-4390-ac43-d5e302c423d8.png" alt="Winged Canvas" />
+            <PartnerLogo src="/lovable-uploads/9f73b137-b45d-40cb-b09f-cc1f9a409113.png" alt="SugaCayne" />
           </div>
         </div>
       </section>
       
-      {/* Our Sponsors */}
+      {/* Partner With Purpose */}
       <section className="py-16 bg-cream-beige">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold font-playfair text-deep-teal text-center mb-10 flex items-center justify-center gap-3">
             <Award size={28} className="text-warm-terracotta" />
-            <span>Our Sponsors</span>
+            <span>Partner With Purpose</span>
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-5xl mx-auto mb-16">
-            {/* Placeholder for sponsor logos - these would be replaced with actual sponsor logos */}
-            {Array(8).fill(null).map((_, i) => (
-              <div 
-                key={i} 
-                className="aspect-square bg-white rounded-lg flex items-center justify-center p-6 shadow-md"
-              >
-                <div className="text-deep-teal text-center">
-                  <div className="font-bold text-lg font-playfair">Sponsor</div>
-                  <div className="text-sm font-poppins">Logo {i + 1}</div>
+          <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+            <div className="prose max-w-none text-deep-teal font-poppins mb-8">
+              <p className="text-xl font-playfair font-bold mb-4">
+                This is more than an invitation. It's a challenge.
+              </p>
+              <p>
+                We're not asking for applause. We're calling on champions with vision—those who turn intentions into action and know that equity is built, not promised.
+              </p>
+              <p>
+                The solution is here. The moment is now.
+                To stay silent—or on the sidelines—is to prolong the very problem we all claim to care about.
+              </p>
+              
+              <div className="my-8 space-y-3">
+                <div className="flex items-center">
+                  <span className="text-warm-terracotta mr-3 text-xl">•</span>
+                  <p className="m-0">Invest in youth and women in the arts</p>
                 </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold font-playfair text-deep-teal text-center mb-6">
-              Become a Sponsor
-            </h3>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <div className="flex items-center gap-3 text-warm-terracotta mb-4">
-                    <Award size={24} />
-                    <h4 className="text-xl font-playfair font-bold text-deep-teal">Sponsorship Benefits</h4>
-                  </div>
-                  <ul className="space-y-2 font-poppins">
-                    <li className="flex items-start">
-                      <span className="text-warm-terracotta mr-2">•</span>
-                      <span>Logo placement on all event materials</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-warm-terracotta mr-2">•</span>
-                      <span>Recognition in press releases and media</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-warm-terracotta mr-2">•</span>
-                      <span>VIP access to exhibition openings</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-warm-terracotta mr-2">•</span>
-                      <span>Opportunity to connect with featured artists</span>
-                    </li>
-                  </ul>
+                <div className="flex items-center">
+                  <span className="text-warm-terracotta mr-3 text-xl">•</span>
+                  <p className="m-0">Champion cultural equity that lives beyond hashtags</p>
                 </div>
-                
-                <div>
-                  <div className="flex items-center gap-3 text-warm-terracotta mb-4">
-                    <Landmark size={24} />
-                    <h4 className="text-xl font-playfair font-bold text-deep-teal">Sponsorship Levels</h4>
-                  </div>
-                  <ul className="space-y-2 font-poppins">
-                    <li className="flex items-start">
-                      <span className="text-warm-terracotta mr-2">•</span>
-                      <span><strong>Platinum:</strong> $5,000+</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-warm-terracotta mr-2">•</span>
-                      <span><strong>Gold:</strong> $2,500+</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-warm-terracotta mr-2">•</span>
-                      <span><strong>Silver:</strong> $1,000+</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-warm-terracotta mr-2">•</span>
-                      <span><strong>Bronze:</strong> $500+</span>
-                    </li>
-                  </ul>
+                <div className="flex items-center">
+                  <span className="text-warm-terracotta mr-3 text-xl">•</span>
+                  <p className="m-0">Fuel bold, intergenerational storytelling</p>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-warm-terracotta mr-3 text-xl">•</span>
+                  <p className="m-0">Transform public spaces into platforms for belonging and brilliance</p>
                 </div>
               </div>
               
-              <div className="text-center">
-                <Button variant="denim" size="lg">
-                  Contact Us About Sponsorship
-                </Button>
-              </div>
+              <p className="text-xl font-playfair font-bold mt-8">
+                Final Call to Action:
+              </p>
+              <p>
+                This is the kind of movement history remembers—and funders regret missing.
+                If you want to be more than a supporter—be a builder.
+              </p>
+            </div>
+            
+            <div className="text-center mt-8">
+              <Button variant="denim" size="lg">
+                📩 Request the sponsorship deck now
+              </Button>
             </div>
           </div>
         </div>
