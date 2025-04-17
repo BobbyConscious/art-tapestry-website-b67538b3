@@ -90,13 +90,9 @@ const Events = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-10">
             <div className="w-full lg:w-1/2">
-              <div className="mb-6">
-                <img 
-                  src="/lovable-uploads/cc5181b6-3d3d-49cd-93c2-6d5112c2a4a5.png" 
-                  alt="RISE Collective Logo" 
-                  className="h-16 w-auto"
-                />
-              </div>
+              <h3 className="text-2xl font-bold font-playfair text-deep-teal mb-6">
+                Community Impact
+              </h3>
               <div className="prose prose-lg text-deep-teal max-w-none">
                 <p>Our events bring together people from all walks of life, creating spaces for intergenerational learning and cultural celebration. Through art, we build bridges between different communities and foster understanding across generations.</p>
                 <p>Each workshop and exhibition creates lasting connections that extend beyond the event itself, nurturing creativity and cultural pride throughout the Markham community.</p>
