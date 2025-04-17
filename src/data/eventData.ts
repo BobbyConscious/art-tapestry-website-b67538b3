@@ -14,7 +14,7 @@ export type EventTour = {
 export type Workshop = {
   id: number;
   title: string;
-  icon: React.ReactNode;
+  icon: typeof Book | typeof Mic | typeof Palette | typeof ShoppingBag;
   presenter: string;
   description: string[];
   takeaways: string[];
@@ -53,7 +53,7 @@ export const workshops: Workshop[] = [
   {
     id: 1,
     title: "Roots & Reflections: Visual Storytelling Through Culture",
-    icon: <Palette size={36} />,
+    icon: Palette,
     presenter: "",
     description: [
       "Step into the art of storytelling with visionary artists and creative leaders. In this mixed media workshop, participants will create self-portraits or narrative scenes rooted in their heritage, dreams, or identity that is guided by Ava's own Afro-Caribbean influences.",
@@ -68,7 +68,7 @@ export const workshops: Workshop[] = [
   {
     id: 2,
     title: "Foundations of Art: I Love Who I Am",
-    icon: <Book size={36} />,
+    icon: Book,
     presenter: "",
     description: [
       "Build confidence and artistic skill while celebrating your individuality. In this empowering workshop, the facilitator introduces the foundational elements of art. Using shape, value, and color through the lens of self-love and cultural pride.",
@@ -83,7 +83,7 @@ export const workshops: Workshop[] = [
   {
     id: 3,
     title: "Ink & Identity: Culture Through Poetic Expression",
-    icon: <Mic size={36} />,
+    icon: Mic,
     presenter: "",
     description: [
       "Merge words and visuals in a deeply personal creative experience. The facilitator invites youth to reflect on what they love about their culture and channel those feelings into poetry and abstract art.",
@@ -98,7 +98,7 @@ export const workshops: Workshop[] = [
   {
     id: 4,
     title: "Wearable Culture: Fashion & Carnival Arts",
-    icon: <ShoppingBag size={36} />,
+    icon: ShoppingBag,
     presenter: "",
     description: [
       "Experience the fusion of fashion and heritage with the vibrant artistry of Candice Dixon. This workshop dives into the world of Caribbean Carnival and its rich legacy as a cultural celebration.",

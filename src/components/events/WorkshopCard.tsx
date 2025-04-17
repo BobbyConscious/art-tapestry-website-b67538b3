@@ -1,10 +1,11 @@
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/dialog";
+import { Book, Mic, Palette, ShoppingBag } from "lucide-react";
 
 interface Workshop {
   id: number;
   title: string;
-  icon: React.ReactNode;
+  icon: typeof Book | typeof Mic | typeof Palette | typeof ShoppingBag;
   presenter: string;
   description: string[];
   takeaways: string[];
@@ -15,12 +16,14 @@ interface WorkshopCardProps {
 }
 
 const WorkshopCard = ({ workshop }: WorkshopCardProps) => {
+  const IconComponent = workshop.icon;
+  
   return (
     <Dialog>
       <DialogTrigger asChild>
         <div className="bg-cream-beige text-deep-teal p-6 rounded shadow-md flex items-center hover:bg-opacity-90 cursor-pointer transition-colors">
           <div className="mr-4 text-warm-terracotta">
-            {workshop.icon}
+            <IconComponent size={36} />
           </div>
           <h3 className="font-bold font-playfair text-xl">{workshop.title}</h3>
         </div>

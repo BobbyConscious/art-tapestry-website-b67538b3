@@ -1,6 +1,4 @@
-
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import EventsCalendar from "@/components/events/EventsCalendar";
 import WorkshopsSection from "@/components/events/WorkshopsSection";
 import { eventTours } from "@/data/eventData";
 
@@ -55,9 +53,6 @@ const Events = () => {
           </div>
         </div>
       </section>
-      
-      {/* Event Calendar Section */}
-      <EventsCalendar />
       
       {/* Event Tours Section */}
       {eventTours.map((tour) => (
