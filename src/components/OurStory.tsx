@@ -10,7 +10,7 @@ const OurStory = () => {
             Our Story
           </h2>
 
-          <div className="prose prose-lg max-w-none text-deep-teal font-poppins space-y-4">
+          <div className="prose prose-lg max-w-none text-deep-teal font-poppins space-y-6">
             <p>
               "Bridging Generations – A Cultural Tapestry in Art" is an innovative, community-driven art initiative designed as a collective movement of talented and purposeful BIPOC visual artists.
             </p>

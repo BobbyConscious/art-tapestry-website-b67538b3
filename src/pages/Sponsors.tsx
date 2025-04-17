@@ -25,7 +25,7 @@ const Sponsors = () => {
         </div>
       </section>
       
-      {/* Our Partners */}
+      {/* Our Partners - Updated with new logos */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold font-playfair text-deep-teal text-center mb-10 flex items-center justify-center gap-3">
@@ -34,13 +34,11 @@ const Sponsors = () => {
           </h2>
           
           <div className="flex flex-wrap justify-center gap-10 md:gap-14 max-w-5xl mx-auto">
-            <PartnerLogo src="/lovable-uploads/971fe0c4-b658-46c2-8aeb-4ebd9dd6cd17.png" alt="CTV" />
-            <PartnerLogo src="/lovable-uploads/0cf15100-5069-4a45-8f5c-485b4b3c5c23.png" alt="Bell Media" />
-            <PartnerLogo src="/lovable-uploads/00585485-580b-4479-8219-12af520cb790.png" alt="NOW" />
-            <PartnerLogo src="/lovable-uploads/167bfc67-75a4-48f7-8aa6-67646f45e330.png" alt="Toronto Caribbean" />
-            <PartnerLogo src="/lovable-uploads/84125fb4-422b-4813-b3c3-8cac4ecf7060.png" alt="CBC" />
-            <PartnerLogo src="/lovable-uploads/cf8b30e9-94eb-4066-88e9-66c23f45e530.png" alt="York Region" />
-            <PartnerLogo src="/lovable-uploads/71a08741-61a5-42cf-be5d-33f794b9b9a6.png" alt="Markham Economist & Sun" />
+            <PartnerLogo src="/lovable-uploads/39f4a1f8-cc82-4a74-9b3c-cb4cab496e26.png" alt="RISE Collective" />
+            <PartnerLogo src="/lovable-uploads/85c4e022-ead7-41dd-891b-5bad7f327699.png" alt="Winged Canvas" />
+            <PartnerLogo src="/lovable-uploads/8a19aff1-0965-434c-98ea-6824ce3db3bb.png" alt="SugaCayne" />
+            <PartnerLogo src="/lovable-uploads/8ea0d03c-490b-4904-bd2a-eeaeaf7c8e81.png" alt="City of Markham" />
+            <PartnerLogo src="/lovable-uploads/c4818ef1-ce72-4ef4-9f5e-53964e26c592.png" alt="Markham Public Library" />
           </div>
         </div>
       </section>

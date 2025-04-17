@@ -48,11 +48,11 @@ const eventTours: EventTour[] = [
 const Events = () => {
   return (
     <div className="pt-16">
-      {/* Page Header */}
+      {/* Page Header - Changed to "Partner With Purpose" */}
       <header className="bg-deep-teal py-24 px-4 md:px-6">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold font-playfair text-cream-beige mb-4">
-            Events Calendar
+            Partner With Purpose
           </h1>
         </div>
       </header>
@@ -128,7 +128,8 @@ const Events = () => {
         </div>
       </section>
       
-      {/* Featured Artists Section */}
+      {/* Featured Artists Section with spacing added */}
+      <div className="py-8"></div>
       <FeaturedArtists />
     </div>
   );

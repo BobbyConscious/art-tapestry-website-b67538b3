@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
-import { Mail, MessageSquare, PhoneCall } from 'lucide-react';
+import { Mail, MessageSquare } from 'lucide-react';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -69,7 +69,7 @@ const Contact = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Contact Info */}
+              {/* Contact Info - Removed phone number */}
               <div>
                 <h2 className="text-2xl font-bold font-playfair text-deep-teal mb-6">
                   Get in Touch
@@ -83,16 +83,6 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-deep-teal font-playfair mb-1">Email</h3>
                       <p className="text-deep-teal font-poppins">info@bridginggenerations.art</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="bg-warm-terracotta text-cream-beige p-3 rounded-full mr-4">
-                      <PhoneCall size={20} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-deep-teal font-playfair mb-1">Phone</h3>
-                      <p className="text-deep-teal font-poppins">(416) 555-1234</p>
                     </div>
                   </div>
                   
