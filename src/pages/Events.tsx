@@ -1,4 +1,3 @@
-
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import WorkshopsSection from "@/components/events/WorkshopsSection";
 import { eventTours } from "@/data/eventData";
@@ -32,23 +31,20 @@ const Events = () => {
 
             <div className="prose prose-lg max-w-none text-deep-teal font-poppins space-y-6">
               <p>
-                "Bridging Generations – A Cultural Tapestry in Art" is an innovative, community-driven art initiative designed as a collective movement of talented and purposeful BIPOC visual artists.
+                Connecting generations, honoring heritage, and shaping our collective future through art.
+                Bridging Generations – A Cultural Tapestry in Art was born from a powerful idea: true inclusion is not about seeking permission to belong. It is about building new spaces where every generation, every culture, and every voice can create, connect, and thrive together. Through art, we are shaping a collective space that celebrates diversity, honors heritage, and fosters unity across communities.
               </p>
               
               <p>
-                What began as a personal vision from 17-year-old visual artist and creative director <strong>Ava Jasmine Dedier</strong> is now creating unforgettable community experiences.
+                This vision began with Ava Jasmine Dedier, a 17-year-old visual artist who recognized a profound gap in representation and opportunity within the art world. Rather than waiting for change, Ava became the catalyst. She transformed her lived experiences into a platform that uplifts young, diverse voices and creates lasting bridges between generations.
               </p>
               
               <p>
-                Ava noticed a gap — in galleries, in stories told, and in how young and culturally diverse voices are valued in the art world. That gap also reflected her own lived experience. So, she created a solution:
+                To expand this mission, Ava founded Rise Collective Canada, a nonprofit organization committed to advancing diversity, equity, and inclusion through innovative, youth-driven initiatives. Rise Collective is dedicated to empowering emerging artists and community leaders, providing them with the tools and spaces needed to shape the future on their own terms.
               </p>
               
               <p>
-                <strong>Bridging Generations</strong> is her answer to a world in need of connection. It's a celebration of legacy, creativity, community and cultural identity.
-              </p>
-
-              <p>
-                To strengthen the impact of the event Ava has thoughtfully selected powerhouse artists who will aid in collaboratively building this pioneering event, with a mission to establish an ongoing platform that amplifies artistic talent, fosters deeper cultural understanding, and actively unites multiple generations.
+                Bridging Generations is a living example of this commitment. It is more than an event. It is a movement rooted in creativity, pride, and collective transformation, inviting all generations to come together and reimagine what community, culture, and collaboration can truly be.
               </p>
             </div>
           </div>
