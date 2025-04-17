@@ -1,3 +1,4 @@
+
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import WorkshopsSection from "@/components/events/WorkshopsSection";
 import { eventTours } from "@/data/eventData";
@@ -95,7 +96,8 @@ const Events = () => {
               </h3>
               <div className="prose prose-lg text-deep-teal max-w-none">
                 <p>Our events bring together people from all walks of life, creating spaces for intergenerational learning and cultural celebration. Through art, we build bridges between different communities and foster understanding across generations.</p>
-                <p>Each workshop and exhibition creates lasting connections that extend beyond the event itself, nurturing creativity and cultural pride throughout the Markham community.</p>
+                
+                <p className="mt-6">Each workshop and exhibition creates lasting connections that extend beyond the event itself, nurturing creativity and cultural pride throughout the Markham community.</p>
               </div>
             </div>
             
