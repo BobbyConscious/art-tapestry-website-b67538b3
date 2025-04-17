@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import Button from "@/components/Button";
 import ImageGallery from "@/components/ImageGallery";
@@ -41,14 +42,16 @@ const Home = () => {
           </div>
           
           <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6">
-            <Button variant="default" size="lg" href="https://form.jotform.com/240995812199268">
-              Join the Movement
-            </Button>
+            <div className="bg-soft-teal rounded-lg p-1">
+              <Button variant="default" size="lg" href="https://form.jotform.com/240995812199268">
+                Join the Movement
+              </Button>
+            </div>
             <Button variant="soft-teal" size="lg" to="/events">
               Explore the Event
             </Button>
-            <Button variant="denim" size="lg" to="/events">
-              Learn More
+            <Button variant="denim" size="lg" to="/contact">
+              Support Us
             </Button>
           </div>
         </div>
