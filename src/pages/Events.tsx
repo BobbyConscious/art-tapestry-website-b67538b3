@@ -56,15 +56,15 @@ const eventTours: EventTour[] = [
   }
 ];
 
-// Workshop data with detailed descriptions
+// Workshop data with updated detailed descriptions
 const workshops: Workshop[] = [
   {
     id: 1,
     title: "Roots & Reflections: Visual Storytelling Through Culture",
     icon: <Palette size={36} />,
-    presenter: "Published Visual Artist | Founder, Ava Jasmine Artistry & RISE Collective NonProfit",
+    presenter: "",
     description: [
-      "Step into the art of storytelling with visionary teen artist and creative leader Ava Jasmine Dedier. In this mixed media workshop, participants will create self-portraits or narrative scenes rooted in their heritage, dreams, or identity that is guided by Ava's own Afro-Caribbean influences.",
+      "Step into the art of storytelling with visionary artists and creative leaders. In this mixed media workshop, participants will create self-portraits or narrative scenes rooted in their heritage, dreams, or identity that is guided by Ava's own Afro-Caribbean influences.",
       "Learn how to sketch with purpose, translate personal stories into imagery, and combine materials to bring your vision to life. It's a journey into who you are, where you come from, and where you're going."
     ],
     takeaways: [
@@ -79,7 +79,7 @@ const workshops: Workshop[] = [
     icon: <Book size={36} />,
     presenter: "",
     description: [
-      "Build confidence and artistic skill while celebrating your individuality. In this empowering workshop, Fei Lu introduces the foundational elements of art. Using shape, value, and color through the lens of self-love and cultural pride.",
+      "Build confidence and artistic skill while celebrating your individuality. In this empowering workshop, the facilitator introduces the foundational elements of art. Using shape, value, and color through the lens of self-love and cultural pride.",
       "Participants will be guided from blank canvas to final artwork, using drawing and painting to explore the theme: \"I love who I am, and I'm proud to show it.\" Perfect for beginners and young creators alike."
     ],
     takeaways: [
@@ -94,7 +94,7 @@ const workshops: Workshop[] = [
     icon: <Mic size={36} />,
     presenter: "",
     description: [
-      "Merge words and visuals in a deeply personal creative experience. Tiffany Joy Villahermosa invites youth to reflect on what they love about their culture and channel those feelings into poetry and abstract art.",
+      "Merge words and visuals in a deeply personal creative experience. The facilitator invites youth to reflect on what they love about their culture and channel those feelings into poetry and abstract art.",
       "Participants will write short, affirming poems and transform them into expressive artworks ranging from portraits, symbols, or abstract visuals. This session nurtures emotional literacy, self-worth, and creative freedom, reminding each participant: your story matters, and your art is enough."
     ],
     takeaways: [
