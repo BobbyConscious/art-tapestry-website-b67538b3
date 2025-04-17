@@ -1,10 +1,14 @@
 
-import { Calendar, MapPin, Book, Palette, Mic, ShoppingBag } from "lucide-react";
+import { useState } from "react";
+import { Calendar as CalendarIcon, MapPin, Book, Palette, Mic, ShoppingBag } from "lucide-react";
 import Button from "@/components/Button";
 import FeaturedArtists from "@/components/FeaturedArtists";
 import OurStory from "@/components/OurStory";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
 
 // Event data structure to support multiple events
 type EventTour = {
@@ -122,30 +126,98 @@ const workshops: Workshop[] = [
 ];
 
 const Events = () => {
+  const [date, setDate] = useState<Date | undefined>(new Date());
+  
   return (
     <div className="pt-16">
       {/* Page Header with Background Image */}
       <header className="bg-deep-teal py-24 px-4 md:px-6 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="/lovable-uploads/a0fe7ef8-b510-44b2-9a4a-bac4263bc2e9.png" 
+            src="/lovable-uploads/f7c2c2ab-dce6-475c-aa55-2532c5ee2ffa.png" 
             alt="Events Background" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
         <div className="container mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold font-playfair text-cream-beige mb-4">
-            Partner With Purpose
+            Events
           </h1>
         </div>
       </header>
       
-      {/* Our Story Section with Image */}
-      <OurStory />
+      {/* Our Story Section with updated text */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold font-playfair text-deep-teal text-center mb-8">
+              Our Story
+            </h2>
+
+            <div className="prose prose-lg max-w-none text-deep-teal font-poppins space-y-6">
+              <p>
+                "Bridging Generations – A Cultural Tapestry in Art" is an innovative, community-driven art initiative designed as a collective movement of talented and purposeful BIPOC visual artists.
+              </p>
+              
+              <p>
+                What began as a personal vision from 17-year-old visual artist and creative director <strong>Ava Jasmine Dedier</strong> is now creating unforgettable community experiences.
+              </p>
+              
+              <p>
+                Ava noticed a gap — in galleries, in stories told, and in how young and culturally diverse voices are valued in the art world. That gap also reflected her own lived experience. So, she created a solution:
+              </p>
+              
+              <p>
+                <strong>Bridging Generations</strong> is her answer to a world in need of connection. It's a celebration of legacy, creativity, community and cultural identity.
+              </p>
+
+              <p>
+                To strengthen the impact of the event Ava has thoughtfully selected powerhouse artists who will aid in collaboratively building this pioneering event, with a mission to establish an ongoing platform that amplifies artistic talent, fosters deeper cultural understanding, and actively unites multiple generations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Event Calendar Section */}
+      <section className="py-16 bg-cream-beige">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold font-playfair text-deep-teal text-center mb-8">
+            Event Calendar
+          </h2>
+          
+          <div className="flex flex-col md:flex-row items-start gap-8 max-w-6xl mx-auto">
+            <div className="w-full md:w-1/2 bg-white rounded-lg shadow-md p-4">
+              <Calendar
+                mode="single"
+                selected={date}
+                onSelect={setDate}
+                className="rounded-md border pointer-events-auto"
+              />
+            </div>
+            
+            <div className="w-full md:w-1/2 space-y-6">
+              <h3 className="text-2xl font-bold font-playfair text-deep-teal">
+                Upcoming Events
+              </h3>
+              
+              <div className="space-y-4">
+                {eventTours[0].dates.map((date, index) => (
+                  <div key={index} className="bg-white p-4 rounded-lg shadow-md">
+                    <p className="font-bold text-warm-terracotta">{date.range}</p>
+                    <p className="font-medium text-deep-teal">{date.venue}, {date.location}</p>
+                    <p className="text-sm text-deep-teal mt-2">Art workshops and exhibitions</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* Event Tours Section with Featured Image */}
       {eventTours.map((tour) => (
-        <section key={tour.id} className="py-16 bg-cream-beige">
+        <section key={tour.id} className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col lg:flex-row items-center gap-10 mb-12">
               <div className="w-full lg:w-1/2">
@@ -283,7 +355,7 @@ const EventCard = ({ date, venue, location }: { date: string; venue: string; loc
     <div className="bg-cream-beige border-l-4 border-warm-terracotta p-6 rounded-r shadow-md">
       <div className="flex items-start">
         <div className="mr-4 text-warm-terracotta">
-          <Calendar size={24} />
+          <CalendarIcon size={24} />
         </div>
         <div>
           <p className="font-bold font-playfair text-deep-teal text-xl mb-2">{date}</p>
