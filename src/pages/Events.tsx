@@ -3,6 +3,7 @@ import { Calendar, MapPin, Book, Palette, Mic, ShoppingBag } from "lucide-react"
 import Button from "@/components/Button";
 import FeaturedArtists from "@/components/FeaturedArtists";
 import OurStory from "@/components/OurStory";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 // Event data structure to support multiple events
 type EventTour = {
@@ -13,6 +14,16 @@ type EventTour = {
     venue: string;
     location?: string;
   }[];
+};
+
+// Workshop data structure with detailed information
+type Workshop = {
+  id: number;
+  title: string;
+  icon: React.ReactNode;
+  presenter: string;
+  description: string[];
+  takeaways: string[];
 };
 
 // Sample data for events
@@ -41,6 +52,70 @@ const eventTours: EventTour[] = [
         venue: "Thornhill Village Library",
         location: "Thornhill, ON"
       }
+    ]
+  }
+];
+
+// Workshop data with detailed descriptions
+const workshops: Workshop[] = [
+  {
+    id: 1,
+    title: "Roots & Reflections: Visual Storytelling Through Culture",
+    icon: <Palette size={36} />,
+    presenter: "Published Visual Artist | Founder, Ava Jasmine Artistry & RISE Collective NonProfit",
+    description: [
+      "Step into the art of storytelling with visionary teen artist and creative leader Ava Jasmine Dedier. In this mixed media workshop, participants will create self-portraits or narrative scenes rooted in their heritage, dreams, or identity that is guided by Ava's own Afro-Caribbean influences.",
+      "Learn how to sketch with purpose, translate personal stories into imagery, and combine materials to bring your vision to life. It's a journey into who you are, where you come from, and where you're going."
+    ],
+    takeaways: [
+      "How to visually express identity and culture",
+      "Rapid sketching and mixed media techniques",
+      "Artistic storytelling from concept to creation"
+    ]
+  },
+  {
+    id: 2,
+    title: "Foundations of Art: I Love Who I Am",
+    icon: <Book size={36} />,
+    presenter: "",
+    description: [
+      "Build confidence and artistic skill while celebrating your individuality. In this empowering workshop, Fei Lu introduces the foundational elements of art. Using shape, value, and color through the lens of self-love and cultural pride.",
+      "Participants will be guided from blank canvas to final artwork, using drawing and painting to explore the theme: \"I love who I am, and I'm proud to show it.\" Perfect for beginners and young creators alike."
+    ],
+    takeaways: [
+      "Understanding the elements of art",
+      "Step-by-step creative process guidance",
+      "Positive affirmations through visual storytelling"
+    ]
+  },
+  {
+    id: 3,
+    title: "Ink & Identity: Culture Through Poetic Expression",
+    icon: <Mic size={36} />,
+    presenter: "",
+    description: [
+      "Merge words and visuals in a deeply personal creative experience. Tiffany Joy Villahermosa invites youth to reflect on what they love about their culture and channel those feelings into poetry and abstract art.",
+      "Participants will write short, affirming poems and transform them into expressive artworks ranging from portraits, symbols, or abstract visuals. This session nurtures emotional literacy, self-worth, and creative freedom, reminding each participant: your story matters, and your art is enough."
+    ],
+    takeaways: [
+      "Explore emotions and identity through poetry",
+      "Learn abstract art techniques rooted in self-expression",
+      "Celebrate authenticity and cultural pride"
+    ]
+  },
+  {
+    id: 4,
+    title: "Wearable Culture: Fashion & Carnival Arts",
+    icon: <ShoppingBag size={36} />,
+    presenter: "",
+    description: [
+      "Experience the fusion of fashion and heritage with the vibrant artistry of Candice Dixon. This workshop dives into the world of Caribbean Carnival and its rich legacy as a cultural celebration.",
+      "Participants will design and create their own wearable art: masks, costume elements, or bold accessories that draw from their cultural background and personal creativity. A joyful hands-on exploration of style, identity, and empowerment."
+    ],
+    takeaways: [
+      "Learn the cultural roots of Carnival",
+      "Explore fashion as a form of storytelling",
+      "Create expressive, heritage-inspired wearable pieces"
     ]
   }
 ];
@@ -90,25 +165,12 @@ const Events = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-10">
-            <WorkshopCard 
-              icon={<Palette size={36} />}
-              title="Roots & Reflections: Visual Storytelling Through Culture"
-            />
-            
-            <WorkshopCard 
-              icon={<Book size={36} />}
-              title="Foundations of Art: I Love Who I Am"
-            />
-            
-            <WorkshopCard 
-              icon={<Mic size={36} />}
-              title="Ink & Identity: Culture Through Poetic Expression"
-            />
-            
-            <WorkshopCard 
-              icon={<ShoppingBag size={36} />}
-              title="Wearable Culture: Fashion & Carnival Arts"
-            />
+            {workshops.map((workshop) => (
+              <WorkshopCard 
+                key={workshop.id}
+                workshop={workshop}
+              />
+            ))}
           </div>
           
           <div className="max-w-3xl mx-auto text-center">
@@ -166,14 +228,43 @@ const EventCard = ({ date, venue, location }: { date: string; venue: string; loc
   );
 };
 
-const WorkshopCard = ({ icon, title }: { icon: React.ReactNode; title: string }) => {
+const WorkshopCard = ({ workshop }: { workshop: Workshop }) => {
   return (
-    <div className="bg-cream-beige text-deep-teal p-6 rounded shadow-md flex items-center">
-      <div className="mr-4 text-warm-terracotta">
-        {icon}
-      </div>
-      <h3 className="font-bold font-playfair text-xl">{title}</h3>
-    </div>
+    <Dialog>
+      <DialogTrigger asChild>
+        <div className="bg-cream-beige text-deep-teal p-6 rounded shadow-md flex items-center hover:bg-opacity-90 cursor-pointer transition-colors">
+          <div className="mr-4 text-warm-terracotta">
+            {workshop.icon}
+          </div>
+          <h3 className="font-bold font-playfair text-xl">{workshop.title}</h3>
+        </div>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[600px] bg-cream-beige">
+        <DialogHeader>
+          <DialogTitle className="text-2xl font-playfair text-deep-teal">{workshop.title}</DialogTitle>
+          {workshop.presenter && (
+            <DialogDescription className="text-warm-terracotta font-medium">
+              {workshop.presenter}
+            </DialogDescription>
+          )}
+        </DialogHeader>
+        
+        <div className="mt-4 text-deep-teal space-y-4">
+          {workshop.description.map((paragraph, index) => (
+            <p key={index} className="font-poppins">{paragraph}</p>
+          ))}
+          
+          <div className="mt-6">
+            <h4 className="font-bold font-playfair text-lg text-deep-teal mb-2">Takeaways:</h4>
+            <ul className="list-disc pl-5 space-y-1">
+              {workshop.takeaways.map((takeaway, index) => (
+                <li key={index} className="font-poppins">{takeaway}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 };
 
