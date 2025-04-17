@@ -124,6 +124,7 @@ const Events = () => {
                   alt="Ava Jasmine Dedier" 
                   className="w-full aspect-square object-cover rounded-lg mb-3"
                 />
+                <p className="text-center text-deep-teal font-medium">Ava Jasmine Dedier</p>
               </div>
               <div>
                 <img 
@@ -131,6 +132,7 @@ const Events = () => {
                   alt="Fei Lu" 
                   className="w-full aspect-square object-cover rounded-lg mb-3"
                 />
+                <p className="text-center text-deep-teal font-medium">Fei Lu</p>
               </div>
               <div>
                 <img 
@@ -138,6 +140,7 @@ const Events = () => {
                   alt="Candice Dixon" 
                   className="w-full aspect-square object-cover rounded-lg mb-3"
                 />
+                <p className="text-center text-deep-teal font-medium">Candice Dixon</p>
               </div>
               <div>
                 <img 
@@ -145,6 +148,7 @@ const Events = () => {
                   alt="Tiffany Joy Villahermosa" 
                   className="w-full aspect-square object-cover rounded-lg mb-3"
                 />
+                <p className="text-center text-deep-teal font-medium">Tiffany Joy Villahermosa</p>
               </div>
               <div>
                 <img 
@@ -152,6 +156,7 @@ const Events = () => {
                   alt="Jamera DaCosta" 
                   className="w-full aspect-square object-cover rounded-lg mb-3"
                 />
+                <p className="text-center text-deep-teal font-medium">Jamera DaCosta</p>
               </div>
             </div>
 
