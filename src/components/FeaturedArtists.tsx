@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 const artists: Artist[] = [
   {
@@ -74,11 +74,13 @@ const FeaturedArtists = () => {
         {/* Partner Logos - Updated with new logos */}
         <div className="mt-16">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            <img src="/lovable-uploads/39f4a1f8-cc82-4a74-9b3c-cb4cab496e26.png" alt="RISE Collective" className="h-12 object-contain" />
-            <img src="/lovable-uploads/85c4e022-ead7-41dd-891b-5bad7f327699.png" alt="Winged Canvas" className="h-12 object-contain" />
-            <img src="/lovable-uploads/8a19aff1-0965-434c-98ea-6824ce3db3bb.png" alt="SugaCayne" className="h-12 object-contain" />
-            <img src="/lovable-uploads/8ea0d03c-490b-4904-bd2a-eeaeaf7c8e81.png" alt="City of Markham" className="h-12 object-contain" />
-            <img src="/lovable-uploads/c4818ef1-ce72-4ef4-9f5e-53964e26c592.png" alt="Markham Public Library" className="h-12 object-contain" />
+            <img src="/lovable-uploads/726a3789-46ad-45d8-8545-e59dfa7a97e8.png" alt="Bell Media" className="h-12 object-contain" />
+            <img src="/lovable-uploads/2024673c-8174-4d93-9cf8-91c83446c808.png" alt="CTV" className="h-12 object-contain" />
+            <img src="/lovable-uploads/f379b88a-160e-4fab-9f8f-318c70be679d.png" alt="NOW" className="h-12 object-contain" />
+            <img src="/lovable-uploads/8d5b5a14-de84-4679-a118-672da198d177.png" alt="Newmarket Today" className="h-12 object-contain" />
+            <img src="/lovable-uploads/c5bedac4-bfbd-4ce7-b1dd-0db1bfe66cc5.png" alt="CBC" className="h-12 object-contain" />
+            <img src="/lovable-uploads/8272e694-b13d-450a-98b5-b216b02f6eb4.png" alt="York Region" className="h-12 object-contain" />
+            <img src="/lovable-uploads/183a5038-7fe5-45d1-8b2b-a534901f9513.png" alt="Markham Economist & Sun" className="h-12 object-contain" />
           </div>
         </div>
       </div>
