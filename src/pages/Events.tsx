@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import FeaturedArtists from "@/components/FeaturedArtists";
 import OurStory from "@/components/OurStory";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 // Event data structure to support multiple events
 type EventTour = {
@@ -123,25 +124,49 @@ const workshops: Workshop[] = [
 const Events = () => {
   return (
     <div className="pt-16">
-      {/* Page Header - Changed to "Partner With Purpose" */}
-      <header className="bg-deep-teal py-24 px-4 md:px-6">
-        <div className="container mx-auto text-center">
+      {/* Page Header with Background Image */}
+      <header className="bg-deep-teal py-24 px-4 md:px-6 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img 
+            src="/lovable-uploads/a0fe7ef8-b510-44b2-9a4a-bac4263bc2e9.png" 
+            alt="Events Background" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold font-playfair text-cream-beige mb-4">
             Partner With Purpose
           </h1>
         </div>
       </header>
       
-      {/* Our Story Section */}
+      {/* Our Story Section with Image */}
       <OurStory />
       
-      {/* Event Tours Section */}
+      {/* Event Tours Section with Featured Image */}
       {eventTours.map((tour) => (
         <section key={tour.id} className="py-16 bg-cream-beige">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl md:text-4xl font-bold font-playfair text-deep-teal text-center mb-12">
-              {tour.title}
-            </h2>
+            <div className="flex flex-col lg:flex-row items-center gap-10 mb-12">
+              <div className="w-full lg:w-1/2">
+                <h2 className="text-3xl md:text-4xl font-bold font-playfair text-deep-teal mb-6">
+                  {tour.title}
+                </h2>
+                <div className="prose prose-lg text-deep-teal max-w-none">
+                  <p>Join us for a series of transformative art events hosted across the Markham area. Our tour brings together diverse cultural expressions, hands-on workshops, and opportunities to connect with leading artists of all ages.</p>
+                </div>
+              </div>
+              
+              <div className="w-full lg:w-1/2 rounded-lg overflow-hidden shadow-lg">
+                <AspectRatio ratio={16/9}>
+                  <img 
+                    src="/lovable-uploads/54ee77e5-d0a3-48e5-b8f2-30c28cb48c03.png" 
+                    alt="Intergenerational art event" 
+                    className="w-full h-full object-cover"
+                  />
+                </AspectRatio>
+              </div>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {tour.dates.map((date, index) => (
@@ -157,12 +182,43 @@ const Events = () => {
         </section>
       ))}
       
-      {/* Workshop Themes */}
+      {/* Workshop Themes with Gallery */}
       <section className="py-16 bg-soft-teal text-cream-beige">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold font-playfair text-cream-beige text-center mb-12">
             Workshop Themes
           </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <img 
+                src="/lovable-uploads/9a5fd8df-7472-4d9c-b4f5-336d74a00668.png" 
+                alt="Group workshop activity" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <img 
+                src="/lovable-uploads/a42a3447-9bd9-4ceb-8a0b-4125c9324588.png" 
+                alt="Creative art project" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <img 
+                src="/lovable-uploads/c7390662-fc90-451c-8be1-57ea6297d184.png" 
+                alt="Young artist" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <img 
+                src="/lovable-uploads/4f434f45-47d7-4bde-ad0f-2cff14472537.png" 
+                alt="Artist displaying work" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-10">
             {workshops.map((workshop) => (
@@ -186,6 +242,31 @@ const Events = () => {
             >
               Register Here – Markham Public Library ➜
             </Button>
+          </div>
+        </div>
+      </section>
+      
+      {/* Community Impact Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-10">
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-3xl font-bold font-playfair text-deep-teal mb-6">Community Impact</h2>
+              <div className="prose prose-lg text-deep-teal max-w-none">
+                <p>Our events bring together people from all walks of life, creating spaces for intergenerational learning and cultural celebration. Through art, we build bridges between different communities and foster understanding across generations.</p>
+                <p>Each workshop and exhibition creates lasting connections that extend beyond the event itself, nurturing creativity and cultural pride throughout the Markham community.</p>
+              </div>
+            </div>
+            
+            <div className="w-full lg:w-1/2 rounded-lg overflow-hidden shadow-lg">
+              <AspectRatio ratio={4/3}>
+                <img 
+                  src="/lovable-uploads/8a19aff1-0965-434c-98ea-6824ce3db3bb.png" 
+                  alt="Community art celebration" 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+            </div>
           </div>
         </div>
       </section>
