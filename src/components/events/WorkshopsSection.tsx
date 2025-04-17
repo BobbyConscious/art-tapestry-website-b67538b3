@@ -1,4 +1,3 @@
-
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import WorkshopCard from "./WorkshopCard";
 import Button from "@/components/Button";
@@ -15,29 +14,29 @@ const WorkshopsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/9a5fd8df-7472-4d9c-b4f5-336d74a00668.png" 
-              alt="Group workshop activity" 
+              src="/lovable-uploads/6afc7934-3214-43b0-8e3e-59877b0a4146.png" 
+              alt="Children displaying their artwork" 
               className="w-full h-full object-cover"
             />
           </div>
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/a42a3447-9bd9-4ceb-8a0b-4125c9324588.png" 
-              alt="Creative art project" 
+              src="/lovable-uploads/28c52e7b-03f5-4dba-a520-eeaf37ae877d.png" 
+              alt="Art workshop with children" 
               className="w-full h-full object-cover"
             />
           </div>
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/c7390662-fc90-451c-8be1-57ea6297d184.png" 
-              alt="Young artist" 
+              src="/lovable-uploads/04de05b4-b7a8-4488-814c-165416289410.png" 
+              alt="Students painting" 
               className="w-full h-full object-cover"
             />
           </div>
           <div className="aspect-square rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/4f434f45-47d7-4bde-ad0f-2cff14472537.png" 
-              alt="Artist displaying work" 
+              src="/lovable-uploads/bd4cebdd-614a-4273-990a-fac6133f077d.png" 
+              alt="Carnival mask making workshop" 
               className="w-full h-full object-cover"
             />
           </div>
