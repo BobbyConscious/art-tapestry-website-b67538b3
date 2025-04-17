@@ -31,7 +31,7 @@ const Events = () => {
 
             <div className="prose prose-lg max-w-none text-deep-teal font-poppins space-y-6">
               <p>
-                Connecting generations, honoring heritage, and shaping our collective future through art.
+                <strong className="block text-xl mb-4">Connecting generations, honoring heritage, and shaping our collective future through art.</strong>
                 Bridging Generations – A Cultural Tapestry in Art was born from a powerful idea: true inclusion is not about seeking permission to belong. It is about building new spaces where every generation, every culture, and every voice can create, connect, and thrive together. Through art, we are shaping a collective space that celebrates diversity, honors heritage, and fosters unity across communities.
               </p>
               
