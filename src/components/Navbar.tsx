@@ -17,14 +17,14 @@ const Navbar = () => {
           {/* Home Button - visually consistent with other nav links */}
           <Link
             to="/"
-            className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors border-2 border-warm-terracotta"
+            className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors"
           >
             Home
           </Link>
           <Link to="/events" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">
             Events
           </Link>
-          <Link to="/art-contest" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors border-2 border-warm-terracotta">
+          <Link to="/art-contest" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">
             Art Contest
           </Link>
           <Link to="/gallery" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">

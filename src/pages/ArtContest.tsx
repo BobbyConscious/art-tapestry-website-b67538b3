@@ -22,8 +22,7 @@ const ArtContest = () => (
         <ul className="list-disc ml-6 text-md text-deep-teal font-poppins mb-4 space-y-1">
           <li><span className="font-semibold">Youth Division:</span> Ages 11 to 14</li>
           <li><span className="font-semibold">Teen Division:</span> Ages 15 to 18</li>
-          <li><span className="font-semibold">Young Adult Division:</span> Ages 19 to 25</li>
-          <li><span className="font-semibold">Adult Division:</span> Ages 25+</li>
+          <li><span className="font-semibold">Adult Division:</span> Age 19+</li>
         </ul>
         <h3 className="font-bold text-lg text-eggplant-plum mb-2">Contest Highlights:</h3>
         <ul className="list-disc ml-6 text-md text-deep-teal font-poppins space-y-1 mb-3">
@@ -61,7 +60,7 @@ const ArtContest = () => (
         </p>
       </div>
       <div className="text-center">
-        <Button variant="forest" size="lg" disabled>
+        <Button variant="default" size="lg" disabled>
           Submissions Opening Soon!
         </Button>
       </div>
@@ -70,3 +69,4 @@ const ArtContest = () => (
 );
 
 export default ArtContest;
+
