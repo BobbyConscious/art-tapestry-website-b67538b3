@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 const ArtContest = () => (
@@ -30,8 +29,7 @@ const ArtContest = () => (
           <li><span className="font-semibold">Professional Mentorship:</span> Winners will receive a one-on-one mentoring opportunity with a professional, featured artist from the Bridging Generations event</li>
           <li><span className="font-semibold">Recognition:</span> Certificates of recognition for all finalists</li>
           <li><span className="font-semibold">Prizes:</span> Cash awards and special prizes for top submissions in each category</li>
-          <li><span className="font-semibold">Media Spotlight:</span> An opportunity to be featured in community media, event promotions, and the Bridging Generations exhibition</li>
-          <li><span className="font-semibold">Exhibition:</span> Selected artworks will be professionally showcased at Winged Canvas Art School and during the touring exhibition</li>
+          <li><span className="font-semibold">Media Spotlight:</span> An opportunity to be featured in community media and event promotions.</li>
         </ul>
       </div>
 
@@ -69,4 +67,3 @@ const ArtContest = () => (
 );
 
 export default ArtContest;
-
