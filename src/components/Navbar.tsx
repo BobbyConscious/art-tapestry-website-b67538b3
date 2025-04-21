@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -7,14 +8,31 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo and Home */}
         <div className="flex gap-2 md:gap-6 items-center">
-          <Link to="/" className="font-playfair text-2xl text-cream-beige font-bold hover:text-warm-terracotta transition-colors">Bridging Generations</Link>
+          <Link to="/" className="font-playfair text-2xl text-cream-beige font-bold hover:text-warm-terracotta transition-colors">
+            Bridging Generations
+          </Link>
         </div>
         {/* Nav links */}
         <div className="flex gap-3 md:gap-6 items-center justify-end">
-          <Link to="/events" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">Events</Link>
-          <Link to="/art-contest" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors border-2 border-warm-terracotta">Art Contest</Link>
-          <Link to="/gallery" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">Gallery</Link>
-          <Link to="/contact" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">Contact</Link>
+          {/* Home Button - visually consistent with other nav links */}
+          <Link
+            to="/"
+            className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors border-2 border-warm-terracotta"
+          >
+            Home
+          </Link>
+          <Link to="/events" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">
+            Events
+          </Link>
+          <Link to="/art-contest" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors border-2 border-warm-terracotta">
+            Art Contest
+          </Link>
+          <Link to="/gallery" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">
+            Gallery
+          </Link>
+          <Link to="/contact" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">
+            Contact
+          </Link>
         </div>
       </div>
     </nav>
@@ -22,3 +40,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
