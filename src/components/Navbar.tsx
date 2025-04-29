@@ -27,6 +27,9 @@ const Navbar = () => {
           <Link to="/art-contest" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">
             Art Contest
           </Link>
+          <Link to="/sponsors" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">
+            Sponsors
+          </Link>
           <Link to="/gallery" className="font-poppins text-cream-beige hover:text-warm-terracotta font-semibold text-base px-3 py-1 rounded transition-colors">
             Gallery
           </Link>
@@ -40,4 +43,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
