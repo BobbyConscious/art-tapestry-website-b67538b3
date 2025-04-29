@@ -1,13 +1,10 @@
 
 import React from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { EventTour as EventTourType } from "@/data/eventData";
 
 type EventTourProps = {
-  tour: {
-    id: string;
-    title: string;
-    image?: string;
-  };
+  tour: EventTourType;
 };
 
 const EventTour = ({ tour }: EventTourProps) => {
@@ -21,6 +18,16 @@ const EventTour = ({ tour }: EventTourProps) => {
             </h2>
             <div className="prose prose-lg text-deep-teal max-w-none">
               <p>Join us for a series of transformative art events hosted across the Markham area. Our tour brings together diverse cultural expressions, hands-on workshops, and opportunities to connect with leading artists of all ages.</p>
+            </div>
+            
+            <div className="mt-6 space-y-4">
+              {tour.dates.map((date, index) => (
+                <div key={index} className="p-4 border border-soft-teal rounded-md">
+                  <p className="font-bold">{date.range}</p>
+                  <p>{date.venue}</p>
+                  {date.location && <p className="text-sm text-gray-600">{date.location}</p>}
+                </div>
+              ))}
             </div>
           </div>
           
