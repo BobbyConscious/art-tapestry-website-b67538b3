@@ -39,6 +39,7 @@ const Sponsors = () => {
             <PartnerLogo src="/lovable-uploads/8a19aff1-0965-434c-98ea-6824ce3db3bb.png" alt="SugaCayne" />
             <PartnerLogo src="/lovable-uploads/8ea0d03c-490b-4904-bd2a-eeaeaf7c8e81.png" alt="City of Markham" />
             <PartnerLogo src="/lovable-uploads/c4818ef1-ce72-4ef4-9f5e-53964e26c592.png" alt="Markham Public Library" />
+            <PartnerLogo src="/lovable-uploads/cadfd0ca-9b86-46c8-b02f-1f8ffba1cd3d.png" alt="Community Arts Partner" />
           </div>
         </div>
       </section>
@@ -61,6 +62,11 @@ const Sponsors = () => {
               src="/lovable-uploads/2044f973-def5-4947-b487-1a0dc7af3d68.png" 
               alt="M Jewelry" 
               className="max-h-24 md:max-h-28" 
+            />
+            <SponsorLogo 
+              src="/lovable-uploads/cadfd0ca-9b86-46c8-b02f-1f8ffba1cd3d.png" 
+              alt="Community Arts Sponsor" 
+              className="max-h-32 md:max-h-36" 
             />
           </div>
         </div>
