@@ -1,5 +1,5 @@
 
-import { Award, Handshake } from "lucide-react";
+import { Award, Handshake, Medal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Sponsors = () => {
@@ -42,9 +42,32 @@ const Sponsors = () => {
           </div>
         </div>
       </section>
+
+      {/* Our Sponsors - New Section */}
+      <section className="py-16 bg-cream-beige">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl font-bold font-playfair text-deep-teal text-center mb-10 flex items-center justify-center gap-3">
+            <Medal size={28} className="text-warm-terracotta" />
+            <span>Our Sponsors</span>
+          </h2>
+          
+          <div className="flex flex-wrap justify-center gap-10 md:gap-14 max-w-5xl mx-auto">
+            <SponsorLogo 
+              src="/lovable-uploads/b3046380-f04a-492f-b08d-43fdae772f8d.png" 
+              alt="RISE Collective" 
+              className="max-h-36 md:max-h-40" 
+            />
+            <SponsorLogo 
+              src="/lovable-uploads/2044f973-def5-4947-b487-1a0dc7af3d68.png" 
+              alt="M Jewelry" 
+              className="max-h-24 md:max-h-28" 
+            />
+          </div>
+        </div>
+      </section>
       
       {/* Partner With Purpose */}
-      <section className="py-16 bg-cream-beige">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold font-playfair text-deep-teal text-center mb-10 flex items-center justify-center gap-3">
             <Award size={28} className="text-warm-terracotta" />
@@ -108,6 +131,14 @@ const PartnerLogo = ({ src, alt }: { src: string; alt: string }) => {
   return (
     <div className="flex items-center justify-center p-4">
       <img src={src} alt={alt} className="max-h-16 max-w-[160px] object-contain" />
+    </div>
+  );
+};
+
+const SponsorLogo = ({ src, alt, className = "" }: { src: string; alt: string; className?: string }) => {
+  return (
+    <div className="flex items-center justify-center p-4">
+      <img src={src} alt={alt} className={`max-w-[300px] object-contain ${className}`} />
     </div>
   );
 };
