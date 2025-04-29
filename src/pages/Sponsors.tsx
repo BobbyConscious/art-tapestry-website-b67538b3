@@ -1,6 +1,6 @@
 
 import { Award, Handshake } from "lucide-react";
-import Button from "@/components/Button";
+import { Button } from "@/components/ui/button";
 
 const Sponsors = () => {
   return (
@@ -93,8 +93,8 @@ const Sponsors = () => {
             </div>
             
             <div className="text-center mt-8">
-              <Button variant="denim" size="lg">
-                📩 Request the sponsorship deck now
+              <Button variant="soft-teal" size="lg" asChild>
+                <a href="/contact">📩 Request the sponsorship deck now</a>
               </Button>
             </div>
           </div>

@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -35,9 +36,34 @@ const Footer = () => {
               www.bridginggenerations.art
             </a>
             <div className="flex space-x-4 mt-4">
-              <SocialIcon icon="facebook" />
-              <SocialIcon icon="instagram" />
-              <SocialIcon icon="twitter" />
+              <a 
+                href="https://www.facebook.com" 
+                className="h-10 w-10 rounded-full bg-soft-teal flex items-center justify-center hover:bg-burnt-mustard transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a 
+                href="https://www.instagram.com/risecollectivecanada" 
+                className="h-10 w-10 rounded-full bg-soft-teal flex items-center justify-center hover:bg-burnt-mustard transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram - RISE Collective Canada"
+              >
+                <Instagram size={20} />
+              </a>
+              <a 
+                href="https://www.twitter.com/riseBIPOC" 
+                className="h-10 w-10 rounded-full bg-soft-teal flex items-center justify-center hover:bg-burnt-mustard transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter - RISE BIPOC"
+              >
+                <Twitter size={20} />
+              </a>
             </div>
           </div>
         </div>
@@ -49,33 +75,6 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
-
-const SocialIcon = ({ icon }: { icon: string }) => {
-  return (
-    <a 
-      href="#" 
-      className="h-10 w-10 rounded-full bg-soft-teal flex items-center justify-center hover:bg-burnt-mustard transition-colors"
-    >
-      {icon === "facebook" && (
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-        </svg>
-      )}
-      {icon === "instagram" && (
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-      )}
-      {icon === "twitter" && (
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-        </svg>
-      )}
-    </a>
   );
 };
 
